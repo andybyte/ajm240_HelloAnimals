@@ -6,7 +6,14 @@ package ajm240_HelloAnimals;
  */
 public class Animal {
 
-	// Properties of the Animal Class.
+	/** 
+	 * Properties of the Animal Class.
+	 * @param age Age of the animal.
+	 * @param color Color of the animal.
+	 * @param type Type of the animal.
+	 * @param weight Weight of the animal.
+	 * @param minimumWeight The minimum weight the animal can be.
+	 */
 
 	private String age;
 	private String color;
