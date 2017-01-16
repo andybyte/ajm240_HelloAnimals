@@ -1,8 +1,14 @@
 package ajm240_assignment1_INFSCI1017;
 
+/**
+ * @author andymrkva
+ * Date: 1/16/2017
+ */
+
 public class Fish extends Animal {
 
 	/**
+	 * Constructor to create Fish.
 	 * @param age
 	 * @param color
 	 * @param type
@@ -11,11 +17,15 @@ public class Fish extends Animal {
 	 */
 	public Fish(String age, String color, int weight, int minimumWeight) {
 		super(age, color, "fish", weight, minimumWeight);
-		// TODO Auto-generated constructor stub
 	}
-	
+
+	/**
+	 * Method to move the animal and change weight.
+	 */
+
 	public void swim() {
-		
+		int newWeight = this.getWeight() - 1;
+		this.setWeight(newWeight);
 	}
 
 }

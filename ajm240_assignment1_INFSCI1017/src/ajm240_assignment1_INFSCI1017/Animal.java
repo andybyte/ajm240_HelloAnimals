@@ -2,24 +2,27 @@ package ajm240_assignment1_INFSCI1017;
 
 /**
  * @author andymrkva
- *
+ * Date: 1/16/2017
  */
 public class Animal {
+
+	// Properties of the Animal Class.
 
 	private String age;
 	private String color;
 	private String type;
 	private int weight;
 	private int minimumWeight;
-	
+
 	/**
+	 * Constructor to create Animal.
 	 * @param age
 	 * @param color
 	 * @param type
 	 * @param weight
 	 * @param minimumWeight
 	 */
-	
+
 	public Animal(String age, String color, String type, int weight, int minimumWeight) {
 		super();
 		this.age = age;
@@ -28,16 +31,17 @@ public class Animal {
 		this.weight = weight;
 		this.minimumWeight = minimumWeight;
 	}
-	
+
 	/**
-	 * 
+	 * Method for the animal to eat and change weight.
 	 */
-	
+
 	public void eat() {
-		
+		this.weight = this.weight + 1;
 	}
 
 	/**
+	 * Getter for weight.
 	 * @return the weight
 	 */
 	public int getWeight() {
@@ -45,19 +49,25 @@ public class Animal {
 	}
 
 	/**
+	 * Setter for weight. Also checks that changing the weight will not go below minimumweight property.
 	 * @param weight the weight to set
 	 */
 	public void setWeight(int weight) {
-		this.weight = weight;
+		if (weight > this.minimumWeight) {
+			this.weight = weight;	
+		} else {
+			System.out.println(weight + " is equal to or below minimum weight for this animal.");
+		}
 	}
-	
+
 	/**
-	 * 
+	 * Method to display the properties of the animal as system.out.print...
 	 */
-	
-	public void output() {
-		
+
+	public void output() {		
+		System.out.print(" \nType: " + this.type + "\n Age: " + this.age + "\n Color: " + this.color + "\n Weight: " 
+				+ this.weight + "\n MinimumWeight: " + this.minimumWeight);
 	}
-	
-	
+
+
 }
