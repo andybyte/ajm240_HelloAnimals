@@ -1,4 +1,4 @@
-package ajm240_assignment1_INFSCI1017;
+package ajm240_HelloAnimals;
 
 /**
  * @author andymrkva
